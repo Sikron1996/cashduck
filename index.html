@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#031430" />
+  <meta name="description" content="Cash Duck — Cash Duck — complete the tasks and claim your GTD spot." />
+  <meta property="og:title" content="Cash Duck — Claim GTD" />
+  <meta property="og:description" content="Cash Duck — claim your GTD spot." />
+  <meta property="og:image" content="assets/landing-hero.jpeg" />
+  <title>Cash Duck — Claim GTD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="stars" aria-hidden="true"></div>
+
+  <section class="landing-screen" id="landingScreen" aria-label="Cash Duck introduction">
+    <div class="landing-pixel-cloud cloud-one" aria-hidden="true"></div>
+    <div class="landing-pixel-cloud cloud-two" aria-hidden="true"></div>
+    <div class="landing-inner">
+      <div class="landing-kicker">WELCOME TO THE POND</div>
+      <div class="landing-brand">
+        <span class="landing-arc">🦆</span>
+        <span>Cash Duck</span>
+      </div>
+      <p class="landing-subtitle">10,000 CASH DUCKS ON ROBINHOODCHAIN</p>
+      <div class="landing-avatar-wrap">
+        <span class="orbit-pixel p1" aria-hidden="true"></span>
+        <span class="orbit-pixel p2" aria-hidden="true"></span>
+        <span class="orbit-pixel p3" aria-hidden="true"></span>
+        <img class="landing-avatar" src="assets/cash-duck-fast.gif" alt="Cash Duck pixel character" />
+      </div>
+      <div class="landing-mini-info" aria-label="Collection details">
+        <span>SUPPLY: 10,000</span><span>PRICE: TBA</span><span>MINT: TBA</span>
+      </div>
+      <button class="landing-claim" id="openGtdButton" type="button">CLAIM GTD SPOTS <span>›</span></button>
+      <p class="landing-hint">COMPLETE TASKS · REGISTER WALLET · SECURE GTD</p>
+    </div>
+  </section>
+
+  <main class="page-shell site-content is-hidden" id="siteContent">
+    <header class="topbar">
+      <a class="mini-brand" href="https://x.com/CashDuck" target="_blank" rel="noopener">CASH DUCK</a>
+      <div class="lang-switch" aria-label="Language selector">
+        <button class="lang active" data-lang="en">EN</button>
+        <button class="lang" data-lang="zh">中文</button>
+      </div>
+    </header>
+
+    <section class="hero" aria-labelledby="title">
+      <div class="avatar-frame">
+        <img src="assets/cash-duck-fast.gif" alt="Cash Duck pixel character" />
+      </div>
+      <div class="brand-row">
+        <span class="arc-mark">🦆</span>
+        <h1 id="title">Cash Duck</h1>
+      </div>
+      <p class="tagline" data-i18n="tagline">10,000 CASH DUCKS ON ROBINHOODCHAIN</p>
+      <p class="subline" data-i18n="subline">GTD IS OPEN · COMPLETE THE TASKS · CLAIM YOUR SPOT</p>
+    </section>
+
+    <section class="stats" aria-label="Mint information">
+      <article class="pixel-card stat-card">
+        <span data-i18n="mintPrice">MINT PRICE</span>
+        <strong id="mintPrice">TBA</strong>
+      </article>
+      <article class="pixel-card stat-card">
+        <span data-i18n="supply">SUPPLY</span>
+        <strong id="supply">10,000</strong>
+      </article>
+      <article class="pixel-card stat-card">
+        <span data-i18n="mintDate">MINT DATE</span>
+        <strong id="mintDate">TBA</strong>
+      </article>
+    </section>
+
+    <section class="pixel-card countdown-card">
+      <h2 data-i18n="mintStarts">MINT STARTS IN</h2>
+      <div class="countdown" id="countdown">
+        <div><strong id="days">--</strong><span data-i18n="days">DAYS</span></div>
+        <div><strong id="hours">--</strong><span data-i18n="hours">HRS</span></div>
+        <div><strong id="minutes">--</strong><span data-i18n="minutes">MIN</span></div>
+        <div><strong id="seconds">--</strong><span data-i18n="seconds">SEC</span></div>
+      </div>
+      <p class="tba-countdown" id="tbaCountdown" data-i18n="dateTba">DATE & TIME TBA</p>
+    </section>
+
+    <section class="pixel-card section-card tasks-section">
+      <h2><span class="arrow">›</span> <span data-i18n="tasks">TASKS</span></h2>
+      <div class="tasks-list">
+        <article class="task" data-task="follow">
+          <div class="task-state" aria-hidden="true">?</div>
+          <div class="task-copy">
+            <strong>FOLLOW @CASH DUCK</strong>
+            <span data-i18n="followHelp">Follow us on X</span>
+          </div>
+          <button class="task-button" data-action="follow" data-i18n="follow">FOLLOW</button>
+        </article>
+
+        <article class="task" data-task="like">
+          <div class="task-state" aria-hidden="true">?</div>
+          <div class="task-copy">
+            <strong data-i18n="likeTitle">LIKE THE POST</strong>
+            <span data-i18n="likeHelp">Like our GTD post</span>
+          </div>
+          <button class="task-button" data-action="like" data-i18n="like">LIKE</button>
+        </article>
+
+        <article class="task" data-task="quote">
+          <div class="task-state" aria-hidden="true">?</div>
+          <div class="task-copy">
+            <strong data-i18n="quoteTitle">QUOTE REPOST</strong>
+            <span data-i18n="quoteHelp">Quote the post and tag your friends</span>
+          </div>
+          <button class="task-button" data-action="quote" data-i18n="quote">QUOTE</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="pixel-card section-card register-section locked" id="registerSection" aria-labelledby="registerTitle">
+      <div class="lock-overlay" id="lockOverlay">
+        <span class="lock-icon">▣</span>
+        <strong data-i18n="completeTasks">COMPLETE ALL TASKS TO UNLOCK</strong>
+      </div>
+
+      <h2 id="registerTitle"><span class="arrow">›</span> <span data-i18n="register">REGISTER</span></h2>
+      <form id="registerForm" novalidate>
+        <label for="xHandle" data-i18n="xHandle">YOUR X HANDLE</label>
+        <input id="xHandle" name="xHandle" type="text" placeholder="@username" autocomplete="off" disabled required />
+
+        <label for="wallet" data-i18n="wallet">YOUR WALLET ADDRESS</label>
+        <input id="wallet" name="wallet" type="text" placeholder="0x..." autocomplete="off" disabled required />
+
+        <p class="form-note" data-i18n="formNote">We use these to register your GTD spot. Wrong address = no GTD.</p>
+        <button type="submit" id="claimButton" class="claim-button" disabled data-i18n="claim">COMPLETE THE TASKS FIRST</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <footer>
+      <span>CASH DUCK © 2026</span>
+      <span>·</span>
+      <a href="https://x.com/CashDuck" target="_blank" rel="noopener">X.COM/CASH DUCK</a>
+    </footer>
+  </main>
+
+
+  <section class="share-modal" id="shareModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="shareTitle">
+    <div class="share-backdrop" data-close-share></div>
+    <div class="pixel-card share-panel">
+      <button class="share-close" type="button" data-close-share aria-label="Close">×</button>
+      <div class="success-badge">✓</div>
+      <h2 id="shareTitle" data-i18n="shareTitle">GTD CLAIM SUBMITTED!</h2>
+      <p data-i18n="shareIntro">Your spot has been registered. Share Cash Duck with your community.</p>
+      <img class="share-preview" id="sharePreview" src="assets/landing-hero.jpeg" alt="Cash Duck share image" />
+      <div class="share-actions">
+        <button class="claim-button share-native" id="shareNativeButton" type="button" data-i18n="shareImage">SHARE WITH IMAGE</button>
+        <a class="task-button share-x" id="shareXButton" href="#" target="_blank" rel="noopener" data-i18n="shareX">POST ON X</a>
+        <a class="task-button share-download" id="downloadShareImage" href="assets/landing-hero.jpeg" download="Cash Duck-GTD.jpeg" data-i18n="downloadImage">DOWNLOAD IMAGE</a>
+      </div>
+      <p class="share-note" data-i18n="shareNote">On desktop: download the image, open X, and attach it to the prepared post.</p>
+    </div>
+  </section>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
