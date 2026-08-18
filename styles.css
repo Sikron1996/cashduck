@@ -638,3 +638,186 @@ body::before { background: radial-gradient(circle at top, rgba(167,207,61,.18), 
 .share-native,.share-download { display:none !important; }
 .success-badge { outline-color:#b8ec49; background:#b8ec49; }
 .share-panel h2 { color:#d7f24a; }
+
+
+/* CASH DUCK SIZE + GIF FIX */
+.page-shell { width: min(700px, calc(100% - 24px)); padding: 18px 0 42px; }
+.topbar { margin-bottom: 12px; }
+.hero { padding: 20px 0 16px; }
+.avatar-frame { width: 150px; padding: 10px; }
+.avatar-frame img { width: 100%; height: auto; display: block; image-rendering: pixelated; }
+.brand-row { gap: 10px; margin-top: 12px; }
+.brand-row h1 { font-size: clamp(28px, 7vw, 42px); }
+.tagline { font-size: 15px; margin: 8px 0 5px; }
+.subline { font-size: 18px; }
+.stats { gap: 12px; }
+.stat-card { padding: 14px 12px 12px; }
+.countdown-card, .section-card { padding: 18px 16px; }
+.landing-inner { width: min(760px, 100%); gap: 14px; }
+.landing-kicker { font-size: clamp(7px, 1.1vw, 10px); }
+.landing-brand { font-size: clamp(28px, 6vw, 58px); gap: 10px; }
+.landing-subtitle { font-size: clamp(8px, 1.4vw, 12px); line-height: 1.6; }
+.landing-avatar-wrap { width: clamp(150px, 18vw, 220px); }
+.landing-avatar { border-width: 4px; outline-width: 3px; box-shadow: 8px 8px 0 rgba(0,0,0,.62), 0 0 26px rgba(24,132,255,.24); }
+.landing-mini-info span { font-size: clamp(6px, 1vw, 9px); padding: 8px 10px 6px; }
+.landing-claim { max-width: 420px; width: 100%; padding: 14px 18px 12px; font-size: clamp(11px, 1.6vw, 16px); }
+.landing-hint { font-size: clamp(6px, 1vw, 8px); }
+.landing-pixel-cloud { opacity: .38; }
+
+/* ensure GIF is shown instead of the placeholder duck icon */
+.avatar-frame img, .landing-avatar { opacity: 1 !important; }
+.avatar-frame::after { content: none !important; }
+.landing-avatar-wrap::after { 
+  content: ''; 
+  position: absolute; 
+  inset: -22px; 
+  border: 4px solid rgba(223,241,91,.42); 
+  clip-path: polygon(0 0, 28% 0, 28% 4px, 72% 4px, 72% 0, 100% 0, 100% 28%, calc(100% - 4px) 28%, calc(100% - 4px) 72%, 100% 72%, 100% 100%, 72% 100%, 72% calc(100% - 4px), 28% calc(100% - 4px), 28% 100%, 0 100%, 0 72%, 4px 72%, 4px 28%, 0 28%);
+  opacity: .32;
+  animation: pixelFrame 3s steps(4,end) infinite reverse;
+  pointer-events: none;
+}
+
+@media (max-width: 720px) {
+  .page-shell { width: min(100% - 18px, 700px); padding-top: 12px; }
+  .avatar-frame { width: 132px; }
+  .landing-inner { gap: 12px; }
+  .landing-brand { font-size: clamp(24px, 8vw, 42px); }
+  .landing-avatar-wrap { width: min(48vw, 190px); }
+  .landing-claim { max-width: 360px; }
+}
+
+
+/* CASH DUCK — BLACK THEME */
+:root {
+  --bg: #000000;
+  --panel: rgba(5,5,5,.96);
+  --panel-2: rgba(10,10,10,.97);
+  --line: #303030;
+  --line-bright: #f2f2f2;
+  --text: #ffffff;
+  --muted: #9d9d9d;
+  --accent: #ffffff;
+  --accent-2: #d8d8d8;
+  --success: #d9ffd9;
+  --danger: #ff6b78;
+  --shadow: #000000;
+}
+html, body { background: #000 !important; }
+body {
+  background-image: none !important;
+  color: #fff;
+}
+body::before {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255,255,255,.07), transparent 32%),
+    linear-gradient(180deg,#000 0%,#060606 52%,#000 100%) !important;
+}
+.bg-grid {
+  opacity: .11;
+  background-image:
+    linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.08) 1px, transparent 1px) !important;
+}
+.stars {
+  opacity: .18;
+  background-image: radial-gradient(circle, rgba(255,255,255,.7) 1px, transparent 1.8px) !important;
+}
+.pixel-card {
+  background: linear-gradient(180deg,rgba(12,12,12,.98),rgba(2,2,2,.98)) !important;
+  outline-color: #333 !important;
+  box-shadow: 7px 7px 0 #000, inset 0 0 0 1px rgba(255,255,255,.05) !important;
+}
+.topbar { border-color: #222 !important; }
+.mini-brand { color:#fff !important; }
+.lang { border-color:#333 !important; background:#090909 !important; color:#aaa !important; }
+.lang.active { border-color:#fff !important; background:#fff !important; color:#000 !important; }
+.avatar-frame,
+.landing-avatar-wrap {
+  background:#050505 !important;
+  border-color:#111 !important;
+  outline-color:#555 !important;
+}
+.avatar-frame img,
+.landing-avatar { opacity:1 !important; }
+.avatar-frame::after { content:none !important; }
+.landing-avatar-wrap::after {
+  border-color:rgba(255,255,255,.28) !important;
+  box-shadow:none !important;
+}
+.landing-arc,
+.arc-mark {
+  color:#fff !important;
+  text-shadow:0 3px 0 #333 !important;
+}
+.tagline,
+.landing-subtitle { color:#fff !important; }
+.subline,
+.landing-hint,
+.landing-kicker { color:#9b9b9b !important; }
+.stat-card strong,
+.countdown strong,
+.arrow { color:#fff !important; }
+.task {
+  outline-color:#2e2e2e !important;
+  background:rgba(7,7,7,.97) !important;
+}
+.task:hover { border-color:#777 !important; }
+.task-button {
+  outline-color:#777 !important;
+  background:linear-gradient(#f4f4f4,#bdbdbd) !important;
+  color:#050505 !important;
+}
+.task.done {
+  background:rgba(14,14,14,.98) !important;
+  outline-color:#bdbdbd !important;
+}
+.task.done .task-state { background:#fff !important; color:#000 !important; }
+.task.done .task-button { background:#333 !important; color:#fff !important; outline-color:#777 !important; }
+.claim-button,
+.landing-claim {
+  background:linear-gradient(180deg,#fff,#cfcfcf) !important;
+  color:#050505 !important;
+  outline-color:#777 !important;
+}
+.register-section.unlocked {
+  outline-color:#fff !important;
+  box-shadow:7px 7px 0 #000,0 0 24px rgba(255,255,255,.08) !important;
+}
+.landing-screen {
+  background:#000 !important;
+}
+.landing-screen::before {
+  background:
+    radial-gradient(circle at 50% 26%,rgba(255,255,255,.08),transparent 32%),
+    linear-gradient(180deg,#000,#080808 50%,#000) !important;
+}
+.landing-screen::after {
+  background:
+    linear-gradient(90deg, transparent 0 10%, rgba(255,255,255,.045) 10% 18%, transparent 18% 38%, rgba(255,255,255,.035) 38% 48%, transparent 48% 70%, rgba(255,255,255,.04) 70% 79%, transparent 79%),
+    linear-gradient(180deg,transparent 0 25%,rgba(255,255,255,.035) 25% 31%,transparent 31% 62%,rgba(255,255,255,.04) 62% 69%,transparent 69%) !important;
+}
+.landing-pixel-cloud {
+  opacity:.22 !important;
+  filter:none !important;
+  background:
+    linear-gradient(90deg, transparent 0 8%, #111 8% 23%, #1a1a1a 23% 48%, #0c0c0c 48% 73%, transparent 73%),
+    linear-gradient(90deg, transparent 0 18%, #111 18% 39%, #1f1f1f 39% 63%, #0d0d0d 63% 84%, transparent 84%) !important;
+}
+.landing-brand {
+  color:#fff !important;
+  text-shadow:0 6px 0 #303030,4px 0 0 #000,-4px 0 0 #000,0 -4px 0 #000 !important;
+}
+.landing-mini-info {
+  border-color:#333 !important;
+  background:rgba(5,5,5,.92) !important;
+  color:#ddd !important;
+}
+.landing-mini-info span {
+  border-color:#333 !important;
+  background:rgba(4,4,4,.9) !important;
+  color:#d5d5d5 !important;
+}
+.orbit-pixel { background:#fff !important; box-shadow:0 0 10px rgba(255,255,255,.45) !important; }
+footer { color:#747474 !important; }
+footer a { color:#bfbfbf !important; }

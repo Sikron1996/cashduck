@@ -1,11 +1,11 @@
 (() => {
-  const cfg = window.ARC_CONFIG || {};
+  const cfg = window.CASH_DUCK_CONFIG || {};
   const storageKey = 'cashduck_tasks_v1';
   const tasks = { follow: false, like: false, quote: false, ...readJSON(storageKey) };
 
   const translations = {
     en: {
-      tagline: '10,000 UNIQUE PFPs ON ARC', subline: 'GTD IS OPEN · COMPLETE THE TASKS · CLAIM YOUR SPOT',
+      tagline: '10,000 CASH DUCKS ON ROBINHOOD CHAIN', subline: 'GTD IS OPEN · COMPLETE THE TASKS · CLAIM YOUR SPOT',
       mintPrice: 'MINT PRICE', supply: 'SUPPLY', mintDate: 'MINT DATE', mintStarts: 'MINT STARTS IN',
       days: 'DAYS', hours: 'HRS', minutes: 'MIN', seconds: 'SEC', dateTba: 'DATE & TIME TBA',
       tasks: 'TASKS', followHelp: 'Follow us on X', follow: 'FOLLOW', likeTitle: 'LIKE + REPOST THE POST',
@@ -20,7 +20,7 @@
       shareNote: 'On desktop: download the image, open X, and attach it to the prepared post.'
     },
     zh: {
-      tagline: 'ARC 上的 10,000 个独特 PFP', subline: 'GTD 已开放 · 完成任务 · 领取名额',
+      tagline: 'ROBINHOOD CHAIN 上的 10,000 CASH DUCKS', subline: 'GTD 已开放 · 完成任务 · 领取名额',
       mintPrice: '铸造价格', supply: '总量', mintDate: '铸造日期', mintStarts: '距离铸造开始',
       days: '天', hours: '时', minutes: '分', seconds: '秒', dateTba: '日期与时间待定',
       tasks: '任务', followHelp: '在 X 上关注我们', follow: '关注', likeTitle: '点赞 + 转发帖子',
