@@ -11,5 +11,5 @@ window.CASH_DUCK_CONFIG = {
   mintTimestamp: "",
   shareText: `I just claimed my GTD spot for @CashDuck 🦆\n\nCash Duck is coming.\n\nQuack your way in.`,
   shareUrl: "https://x.com/cashduck",
-  shareImageUrl: "assets/landing-hero.jpeg"
+  shareImageUrl: ""
 };
